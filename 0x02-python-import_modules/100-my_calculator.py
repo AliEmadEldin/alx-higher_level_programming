@@ -1,7 +1,11 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     import sys
-    from calculator_1 import add, sub, mul, div
+    add = __import__('calculator_1').add
+    sub = __import__('calculator_1').sub
+    mul = __import__('calculator_1').mul
+    div = __import__('calculator_1').div
+    # from calculator_1 import add, sub, mul, div
     if len(sys.argv) != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
